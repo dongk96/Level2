@@ -15,7 +15,7 @@ public class BoardResponseDto {
     public BoardResponseDto(Board board) {
         this.id = board.getId();
         this.title = board.getTitle();
-        this.contents = board.getTitle();
+        this.contents = board.getContents();
         this.author = board.getAuthor();
     }
 }

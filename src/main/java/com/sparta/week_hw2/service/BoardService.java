@@ -67,7 +67,7 @@ public class BoardService {
     }
 
     @Transactional
-    public Long updateBoard(Long id, BoardRequestDto boardRequestDto, HttpServletRequest httpServletRequest){
+    public String updateBoard(Long id, BoardRequestDto boardRequestDto, HttpServletRequest httpServletRequest){
         // Request에서 Token 가져오기
         String token = jwtUtil.resolveToken(httpServletRequest);
         Claims claims;
@@ -93,7 +93,7 @@ public class BoardService {
 
             board.update(boardRequestDto);
 
-            return board.getId();
+            return "업데이트 성공";
 
         } else {
             return null;

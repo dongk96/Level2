@@ -31,7 +31,7 @@ public class BoardController {
     }
 
     @PutMapping("/boards/{id}")
-    public Long updateBoard(
+    public String updateBoard(
             @PathVariable Long id,
             @RequestBody BoardRequestDto boardRequestDto,
             HttpServletRequest httpServletRequest){

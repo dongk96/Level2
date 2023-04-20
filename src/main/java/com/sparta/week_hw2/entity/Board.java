@@ -4,6 +4,7 @@ import com.sparta.week_hw2.dto.BoardRequestDto;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @NoArgsConstructor
@@ -26,7 +27,6 @@ public class Board extends TimeStamped {
     private Long userid;
 
     // Board 클래스의 생성자
-    // -> CourseRequestDto 객체를 인자로 받아 해당 객체의 필드 값을 가져와 title, instructor, cost 필드에 할당
     public Board(BoardRequestDto boardRequestDto, String author, Long user_id) {
         this.title = boardRequestDto.getTitle();
         this.author = author;
